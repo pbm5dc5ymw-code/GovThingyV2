@@ -21,7 +21,7 @@ def load(path, tab=None):
         n = ws.cell(r, 1).value
         if not n or not str(n).strip():
             continue
-        g = lambda c: '' if ws.cell(r, c).value is None else str(ws.cell(r, c).value).strip()
+        g = lambda c, r=r: '' if ws.cell(r, c).value is None else str(ws.cell(r, c).value).strip()
         out.append(dict(r=r, n=re.sub(r'\s+', ' ', str(n)).strip(), ws=ws, hdr=hdr, g=g))
     return out
 

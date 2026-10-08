@@ -14,6 +14,8 @@ ability. Keep these in mind; each has a fix built into the SKILL.md workflow.
 | Transfer target used as parent | FNMA, Disaster Loan put under Commerce in 1942 | Read appendix transfer literally | Transfer moves the top agency; subsidiaries keep their parent |
 | Copying a reference sheet against the page | Social Security bureaus and FHLB units switched to match feedback, then wrong | Trusted the hand sheet over the layout | Layout wins; record disagreements instead of copying |
 | Exact-name search | Misspelled row names ("Chemsity", "Adminstration") looked missing | Literal string matching | Fuzzy/partial matching; confirm absence on the page image |
+| Chart-era parent kept in chartless years | 1943: OPA and Office of Censorship left under the EOP after charts stopped | A 1942 chart footnote ("treated as within the EOP") was carried forward; the Dec 1943/1944 EOP list on p. 53 omits them | Re-read the EOP (p. 53) and OEM (p. 61) membership lists every year; an agency off both lists is standalone |
+| Units missing from the sheet entirely | Office of the Solicitor General, OASI bureau, National Capital Housing Authority, WFA offices | Checked only existing rows against the manual, never the manual's list against the rows | Walk each unit list item by item and confirm a row exists (search dead rows too — reuse them if the unit reappears) |
 | Rewrote a pushed commit | Amended a commit the user had already pushed | Didn't check the remote | `git fetch`; if behind or diverged, add a new commit instead of amending |
 
 ## Where hand-entered data tends to slip (useful when comparing)

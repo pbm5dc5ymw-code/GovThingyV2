@@ -97,7 +97,7 @@ Specific rules learned:
   `https://api.govinfo.gov/published/<year>-01-01/<year>-12-31?offset=0&pageSize=100&collection=GOVMAN&api_key=DEMO_KEY`
   PDFs: `https://www.govinfo.gov/content/pkg/<packageId>/pdf/<packageId>.pdf`
 - Known editions: 1939-10-01, 1940-09-01, 1941-09-01, 1942-03-01 and 1942-09-01 (use Sept), 1943-06-01 and
-  1943-12-01 (Dec used; OPEN), 1944-06-01, 1945-01-01 and 1945-02-01.
+  1943-12-01 (Dec used; OPEN), 1944-06-01 (only 1944 edition; text runs to Aug 1944), 1945-01-01 and 1945-02-01.
 - From the Winter 1943-44 edition on, organization charts were discontinued — use unit lists and officials pages.
 
 ## 8. Open conventions (ask the user; until then use the default and flag)
