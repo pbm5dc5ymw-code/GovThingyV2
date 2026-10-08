@@ -22,7 +22,7 @@ EOP, OEM, FSA, FWA = 'Executive Office of the President', 'Office for Emergency 
 NHA, FHLBA, FPHA = 'National Housing Agency', 'Federal Home Loan Bank Administration', 'Federal Public Housing Authority'
 ARA, ACAA, SOS, AGF = ('Agricultural Research Administration', 'Agricultural Conservation and Adjustment Administration',
                        'Services of Supply', 'Army Ground Forces')
-RFC, CSC = 'Reconstruction Finance Corporation', 'United States Civil Service Commission'
+RFC, CSC, SSB = 'Reconstruction Finance Corporation', 'United States Civil Service Commission', 'Social Security Board'
 P1, P2 = 'Office of the First Assistant Postmaster General', 'Office of the Second Assistant Postmaster General'
 DEAD, OTHER, SKIP = 'DEAD', 'OTHER', 'SKIP'
 
@@ -60,7 +60,7 @@ O.update(rows(DEAD, 69))                                # Bureau of Marine Inspe
 O.update(rows(AG, 30, 35, 59))                          # Agricultural Marketing Admin, Agricultural Research Admin, Agricultural War Relations
 O.update(rows(ARA, 34, 36, 39, 40, 41, 42, 51))
 O.update(rows(ACAA, 4, 54, 45, 55))                     # Agricultural Adjustment Agency, SCS, FCIC, Sugar Agency
-O.update(rows(DEAD, 29, 57, 339, 504))                  # merged into AMA; Agricultural Defense Relations renamed
+O.update(rows(DEAD, 29, 57, 339, 504, 50))              # merged into AMA (Commodity Exchange became an AMA branch); Agricultural Defense Relations renamed
 O.update(rows('Federal Deposit Insurance Corporation', 314))  # Federal Credit Union System
 # Interior
 O.update(rows(INT, 194, 208, 200, 370, 369))            # Fishery Coordination, War Resources Council, Solid Fuels for War, NPPC, Park Trust Fund
@@ -69,7 +69,8 @@ O.update(rows(DEAD, 532, 201, 187, 309))                # renamed "for War"; Div
 O.update(rows(NAVY, 232))                               # Bureau of Naval Personnel
 O.update(rows(DEAD, 222))
 # Treasury
-O.update(rows(TRE, 244, 235, 243, 261, 260))            # War Savings Staff; Fiscal Service units directly under Treasury
+O.update(rows(TRE, 244, 260))                           # War Savings Staff; Comptroller duplicate row
+O.update(rows('Fiscal Service', 235, 243, 261))         # grouped under the Fiscal Service on the Treasury chart
 O.update(rows(DEAD, 530))
 # War (reorganization of March 9, 1942)
 O.update(rows(WAR, 271, 286))
@@ -91,9 +92,22 @@ O.update(rows(FSA, 484, 485, 486, 487, 46, 245, 518, 20, 517))
 # Corrections after review against page layout and the feedback sheet
 O.update(rows('Bureau of Accounts', 408, 423))          # indented under Bureau of Accounts (p. 224)
 O.update(rows(RFC, 297, 329, 440))                      # RFC subsidiaries moved with RFC to Commerce
-O.update(rows(OEM, 511, 512, 513))                      # OPA, BEW, National Housing Agency
-O.update(rows(EOP, 514, 515, 516))                      # Censorship, War Relief Control Board, Selective Service
 O.update(rows(NHA, 322, 323, 336, 349))                 # National Housing Agency units, no intermediate parent
+# Emergency War Agencies chart (p. 565): starred agencies are treated as within the EOP;
+# Selective Service, National Housing Agency and War Relief Control Board report to the President
+O.update(rows(EOP, 511, 512, 514))                      # OPA, BEW, Censorship
+O.update(rows(OTHER, 513, 515, 516))
+# Department charts (pp. 570-595)
+O[345] = 'National Archives'                            # FDR Library: solid line to the Archivist
+B1, B2, B3, B4 = ('Bureau of the First Assistant Postmaster General', 'Bureau of the Second Assistant Postmaster General',
+                  'Bureau of the Third Assistant Postmaster General', 'Bureau of the Fourth Assistant Postmaster General')
+O.update(rows(B1, 390, 391, 392, 399))
+O.update(rows(B2, 395, 396, 397, 398))
+O.update(rows(B3, 402, 403, 404, 405, 406, 407, 409))
+O.update(rows(B4, 412, 413, 414, 415, 416, 417))
+O.update(rows(DEAD, 425))                               # Division of Retirement Records: not on chart or list
+O.update(rows(SSB, 105))                                # U.S. Employment Service reappears under Social Security Board
+O.update(rows(FSA, 311))                                # Apprenticeship Section moved to FSA
 O.update(rows(CSC, 26, 519))
 O.update(rows(FWA, 344, 477))
 O.update(rows(SKIP, 6, 358, 383, 382))                  # quasi-official / international
@@ -103,6 +117,9 @@ NEW = [
     ('Office of Petroleum Coordinator for War', INT),
     ('Office of Strategic Services', OTHER),
     ('American Hemisphere Exports Office', ST),
+    ('Office of Procurement and Material', NAVY),
+    ('Training Within Industry', FSA),
+    ('War Public Works Program', FWA),
 ]
 
 shutil.copy(SRC, DST)
@@ -125,6 +142,13 @@ for name, c in NEW:
     for i, v in enumerate(vals(c)):
         ws.cell(r, COL + i).value = v
     r += 1
+
+# FAQ: hide (never delete) rows for agencies that have died and for legislative/judicial agencies
+for x in range(3, ws.max_row + 1):
+    if not ws.cell(x, 1).value:
+        continue
+    kind = (ws.cell(x, 2).value or '').strip()
+    ws.row_dimensions[x].hidden = kind in ('Legislative', 'Judicial') or ws.cell(x, COL).value == 'Dead'
 
 wb.save(DST)
 print('saved', DST)

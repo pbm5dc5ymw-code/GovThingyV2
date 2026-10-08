@@ -105,6 +105,31 @@ O = {
     6: {1941: SKIP}, 358: {1941: SKIP}, 383: {1941: SKIP},
 }
 
+# Corrections from the organization charts (page images) and the FAQ tab.
+EOP = 'Executive Office of the President'
+FLA_RFC, FHLBB, NARA = RFC, 'Federal Home Loan Bank Board', 'National Archives'
+P2 = 'Office of the Second Assistant Postmaster General'
+CHART = {
+    479: {1940: OTHER},                                     # Executive Office of the President
+    **{r: {1940: EOP} for r in (480, 13, 374, 376, 377, 381)},  # EOP chart: White House, Budget, NRPB, OGR, Liaison, OEM
+    4: {1940: AG}, 50: {1940: AG}, 51: {1940: AG},          # AAA, Commodity Exchange, Experiment Stations: boxes on USDA charts
+    55: {1940: 'Agricultural Adjustment Administration'},   # Sugar Division described inside AAA
+    17: {1940: COM, 1941: DEAD},                            # Civil Aeronautics Authority box on 1940 Commerce chart
+    341: {1940: COM}, 452: {1940: COM},                     # Foreign-Trade Zones Board, Textile Foundation on Commerce charts
+    105: {1940: SSB},                                       # U.S. Employment Service inside Social Security Board box
+    297: {1940: RFC}, 329: {1940: RFC}, 440: {1940: RFC},   # Disaster Loan, FNMA, RFC Mortgage under RFC on FLA charts
+    349: {1940: FHLBB}, 336: {1940: FHLBB},                 # HOLC, FSLIC inside FHLBB box
+    345: {1940: NARA},                                      # Franklin D. Roosevelt Library under the Archivist
+    398: {1940: P2},                                        # Division of Air Mail Service under 2nd Assistant PMG
+    91: {1940: JUS},                                        # Pardon Attorney box on Justice charts
+    295: {1941: 'The Army Air Forces'},                     # Air Corps under Army Air Forces (1941 War chart)
+    # duplicate rows share values (FAQ / feedback)
+    519: {1940: CSC}, 517: {1940: FSA}, 518: {1940: FSA}, 46: {1940: FSA},
+    102: {1940: JUS}, 260: {1940: TRE}, 344: {1940: FWA}, 339: {1940: AG}, 488: {1941: OEM},
+}
+for r, ch in CHART.items():
+    O[r] = {**O.get(r, {}), **ch}
+
 NEW = [
     ('Advisory Commission to the Council of National Defense', {1940: CND, 1941: DEAD}),
     ('National Defense Research Committee', {1940: CND, 1941: OSRD}),
@@ -123,9 +148,9 @@ NEW = [
     ('Division of Exports and Defense Aid', {1942: ST}),
     ('Division of Studies and Statistics', {1942: ST}),
     ('Office of the Provost Marshal General', {1942: WAR}),
-    ('Office of the Chief of the Armored Force', {1942: WAR}),
-    ('General Headquarters', {1942: WAR}),
-    ('Office of the Executive for Reserve and R.O.T.C. Affairs', {1942: WAR}),
+    ('Office of the Chief of the Armored Force', {1941: WAR}),          # on 1941 War chart
+    ('General Headquarters', {1941: WAR}),                             # on 1941 War chart
+    ('Office of the Executive for Reserve and R.O.T.C. Affairs', {1940: WAR}),  # on 1940 War chart
 ]
 
 shutil.copy(SRC, DST)
