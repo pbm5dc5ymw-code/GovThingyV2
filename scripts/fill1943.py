@@ -75,6 +75,7 @@ rows(DEAD, 543, 130, 128, 121, 136, 151, 152, 112)
 rows(DEAD, 317, 477, 344)                       # PWA and WPA functions in liquidation in the Administrator's office
 rows(DEAD, 300)                                 # Electric Home and Farm Authority terminated Oct 1942
 rows(DEAD, 356, 442, 454)                       # Maritime Labor Board (expired June 1942), Savings and Loan Division, Codification Board: not in 1943 text
+rows(DEAD, 144, 231, 322, 159)                  # found comparing to hand data: not in 1943 State/Navy lists; FHLB Board functions now performed by FHLB Administration (p. 137); Adviser on International Economic Affairs is an official (vacant)
 
 NEW = [
     ('Committee on Fair Employment Practice', OEM),
