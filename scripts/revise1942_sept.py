@@ -79,7 +79,7 @@ O.update(rows(AGF, 537))
 O.update(rows(DEAD, 287, 288, 289, 290, 295, 538))
 # Justice, Labor, State
 O.update(rows(JUS, 89, 91, 102))
-O.update(rows(DEAD, 75, 311))
+O.update(rows(DEAD, 75, 311, 356))                     # Maritime Labor Board expired June 22, 1942 (Appendix A)
 O.update(rows(ST, 111, 129, 157))
 O.update(rows(DEAD, 534, 535))
 # Post Office: Offices renamed Bureaus; both rows of each pair share values
@@ -88,11 +88,12 @@ O[399] = P1                                             # Division of Rural Mail
 O[398] = P2                                             # Division of Air Mail Service
 # Commerce related organizations, FSA, duplicates
 O.update(rows(COM, 452, 341))
-O.update(rows(FSA, 484, 485, 486, 487, 46, 245, 518, 20, 517))
+O.update(rows(FSA, 46, 245, 518, 20, 517))
+O.update(rows(SSB, 484, 485, 486, 487))                 # bureaus printed inside the Social Security Board section
 # Corrections after review against page layout and the feedback sheet
 O.update(rows('Bureau of Accounts', 408, 423))          # indented under Bureau of Accounts (p. 224)
 O.update(rows(RFC, 297, 329, 440))                      # RFC subsidiaries moved with RFC to Commerce
-O.update(rows(NHA, 322, 323, 336, 349))                 # National Housing Agency units, no intermediate parent
+O.update(rows(FHLBA, 322, 323, 336, 349))               # supervised by the FHLB Administration (1943 text p. 145)
 # Emergency War Agencies chart (p. 565): starred agencies are treated as within the EOP;
 # Selective Service, National Housing Agency and War Relief Control Board report to the President
 O.update(rows(EOP, 511, 512, 514))                      # OPA, BEW, Censorship
