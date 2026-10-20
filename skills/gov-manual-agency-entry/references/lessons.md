@@ -16,6 +16,10 @@ ability. Keep these in mind; each has a fix built into the SKILL.md workflow.
 | Exact-name search | Misspelled row names ("Chemsity", "Adminstration") looked missing | Literal string matching | Fuzzy/partial matching; confirm absence on the page image |
 | Chart-era parent kept in chartless years | 1943: OPA and Office of Censorship left under the EOP after charts stopped | A 1942 chart footnote ("treated as within the EOP") was carried forward; the Dec 1943/1944 EOP list on p. 53 omits them | Re-read the EOP (p. 53) and OEM (p. 61) membership lists every year; an agency off both lists is standalone |
 | Units missing from the sheet entirely | Office of the Solicitor General, OASI bureau, National Capital Housing Authority, WFA offices | Checked only existing rows against the manual, never the manual's list against the rows | Walk each unit list item by item and confirm a row exists (search dead rows too — reuse them if the unit reappears) |
+| Inclusion test applied unevenly | 1944: killed State boards mentioned in passing but kept Federal Prison Industries, Defense Homes Corp. (also one sentence) | Rows carried from last year were never re-tested | Evidence table for every row each year (evidence.py) |
+| Parent by history instead of heading level | 1944: National Archives Council under National Archives though it has its own top-level heading | Followed earlier coding / chairmanship | Heading level first; only "within"/"under the administration of" makes it a child |
+| Blank rows never checked | Cooperative Research and Service Division (FCA subheading) left blank | Checked only live rows | Run the evidence check on blank and dead rows too |
+| Duplicate rows both live | Office vs Bureau of the First Assistant Postmaster General | No rule | Keep the row matching the manual's wording; other Dead |
 | Rewrote a pushed commit | Amended a commit the user had already pushed | Didn't check the remote | `git fetch`; if behind or diverged, add a new commit instead of amending |
 
 ## Where hand-entered data tends to slip (useful when comparing)

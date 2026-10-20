@@ -62,6 +62,10 @@ National Housing Agency, etc.):
 3. Run it. Do not edit earlier years' cells — flag suspected hand-entry mistakes instead.
 
 ### 5. Check before delivering
+0. `evidence.py <txt> <sheet.xlsx> <year>` — for **every** row (live, blank and dead) finds how the name
+   is printed that year: heading, subheading, run-in heading, list entry, officials line, or sentence
+   only. Live rows with "sentence only"/"none" must be confirmed on the page or made Dead; blank/dead rows
+   with heading/list evidence must be filled. Re-read the EOP and OEM membership lists every year.
 1. `check_sheet.py <new.xlsx> <year> <previous.xlsx>` — must show no parent problems and 0 earlier-year
    cells changed.
 2. Per-department check: every live child of a department must appear in that department's own list or

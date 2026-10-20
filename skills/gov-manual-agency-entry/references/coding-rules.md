@@ -45,15 +45,29 @@ A parent named in `other_parent` must exactly match a live row's `agency_name` t
 Count it if it appears as **any** of:
 - a box on that year's organization chart,
 - an entry in the department's "principal bureaus / divisions / offices ... are as follows:" list,
-- its own section heading with officials (and usually a "Creation and Authority" paragraph).
+- its own section heading with officials (and usually a "Creation and Authority" paragraph),
+- a centered small-caps subheading inside another agency's section (e.g. REGIONAL AGRICULTURAL CREDIT
+  CORPORATIONS inside Farm Credit Administration) — it is a child of that agency. This applies to
+  agencies that have **no** "as follows" unit list; inside a cabinet department the department's own unit
+  list decides (subheadings in its Activities section, e.g. Navy's JUDGE ADVOCATE GENERAL under Executive
+  Offices of the Secretary, are sub-units of a listed unit and are not added),
+- a "Chief/Director, <unit>" line in an officials list (indentation shows the parent).
+
+The same test applies to **every row every year** — rows carried from last year get no benefit of the
+doubt. Record the evidence type and printed page for each live row; a row with no evidence is not live.
 
 Do **not** count:
 - officials or job titles (e.g. "Director of Personnel", "Adviser on International Economic Affairs"),
-- committees or divisions only mentioned in passing,
+- committees, corporations or divisions only mentioned in a sentence of another unit's paragraph
+  (1944: Federal Prison Industries, Defense Homes Corporation, Arboretum Advisory Council) — even if they
+  still legally exist,
+- run-in activity paragraphs ("FEDERAL CREDIT UNIONS.—Federal credit unions are ...") that describe a
+  program, not an office,
 - field/regional offices, branches inside a division (unless the user asks for that depth).
 
 ## 4. Choosing the parent
-Decide from the **page image**, in this order:
+Decide from the **page image**, in this order (heading level first: a unit with its own top-level
+heading is standalone unless the page says "established within" / "under the administration of"):
 1. The manual's reorganization tables / organization charts (solid line = authority; dashed = liaison only).
 2. Creation text: "established within ...", "under the direction and supervision of ...".
 3. The section it is printed in (including a department's "Related Organizations").
@@ -82,7 +96,9 @@ Specific rules learned:
 - **Merged into a new agency**: old rows Dead; new agency gets its own row.
 - **Renamed** — OPEN (see 8). Default: if the sheet already has a row with the new name, old row Dead and
   use the new row; otherwise keep the existing row.
-- **Duplicate rows** for the same agency: give them identical values unless the user has chosen one row.
+- **Duplicate rows** for the same agency: keep live the row whose name matches the manual's wording
+  ("Bureau of the First Assistant Postmaster General", not "Office of ...") and mark the other Dead —
+  this is what the hand-entered sheet does. If neither matches, give them identical values.
 
 ## 6. What to leave out and hide
 - **International agencies**: not considered (FAQ) — leave their year columns blank.
