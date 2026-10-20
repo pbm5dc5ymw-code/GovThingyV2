@@ -64,7 +64,7 @@ rows(TRE, 267)                                  # Coast Guard returned to Treasu
 # War (chart p. 578; Special Staff of 12 divisions p. 197)
 rows(WAR, 270)                                  # Special Staff (chart box)
 rows(SS, 275, 283, 294, 539)                    # Inspector General, Bureau of Public Relations, National Guard Bureau, Reserve and ROTC Affairs listed in the Special Staff
-rows(DEAD, 456, 281)                            # Joint Economy Board and Morale Branch not mentioned
+rows(DEAD, 281)                                 # Morale Branch not mentioned (Joint Economy Board stays: listed on the Navy chart p. 581)
 # Post Office (p. 221)
 rows(B1, 391)                                   # Division of Postmasters reappears under the First Assistant (FAQ: unhide)
 # State (chart p. 576; officials pp. 129-132)
