@@ -69,6 +69,19 @@ rows(DEAD, 405)                                 # Division of Classification rep
 # Federal Security Agency (p. 437)
 rows(DEAD, 20, 517)                             # CCC liquidated by June 30, 1943 (App. A); not a constituent unit
 
+# --- Changes after comparing with the hand-entered 1944 data and re-checking page layout ---
+# Mentioned only in a sentence of another unit's paragraph: no heading, list entry or officials block
+rows(DEAD, 331)                                 # Federal Prison Industries: one sentence under Bureau of Prisons (p. 267); not in Justice list (p. 260)
+rows(DEAD, 437)                                 # Defense Homes Corporation: one sentence in FPHA creation text (p. 139)
+rows(DEAD, 314)                                 # "Federal credit unions": a run-in activity paragraph in the FDIC section (p. 485)
+rows(DEAD, 3)                                   # Advisory Council of the National Arboretum: one sentence under Bureau of Plant Industry (p. 347)
+# Duplicate rows: the unit list names the Bureau, and the hand sheet keeps the Bureau row
+rows(DEAD, 389, 393, 400, 410, 419)             # "Office of the ... Assistant Postmaster General", "Chief Post Office Inspector" (list p. 272 has Bureaus)
+rows(DEAD, 102)                                 # second Immigration and Naturalization Service row (row 85 is live)
+rows(JUS, 96)                                   # Administrative Division: hand sheet uses this row; same unit as row 74 (p. 260)
+rows('Farm Credit Administration', 302)         # Cooperative Research and Service Division: centered subheading in FCA section (p. 357), same format as RACC
+rows(OTHER, 361, 366)                           # National Archives Council, National Historical Publications Commission: own top-level headings (pp. 527-528)
+
 NEW = [
     ('War Refugee Board', EOP),                                     # p. 59
     ('Surplus War Property Administration', OWM),                   # p. 98-99
