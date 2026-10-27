@@ -93,6 +93,9 @@ rows(BFIN, 407, 642, 402, 406, 404, 641, 403)
 rows(BTR, 773, 396, 772, 398)
 # Agriculture (chart p. 507)
 rows(DEAD, 841)                                  # Administrator, Research and Marketing Act: not on chart
+# --- Printed-evidence review (job titles and chart boxes alone are not units) ---
+rows(NME, 855, 856)                              # Personnel Policy Board, Civilian Components Policy Board: own headings p. 117
+rows(DEAD, 553, 554, 699)                        # Interior Budget and Finance, Personnel, Administrative Services: described only as "The Director of ... is responsible" (p. 184)
 
 NEW = [
     ('Air Coordinating Committee', OTHER),                          # p. 286
@@ -104,8 +107,7 @@ NEW = [
     ('Fair Employment Board', 'United States Civil Service Commission'),   # p. 435
     # Department of Defense (chart p. 500)
     ('Office of Medical Services (Defense)', NME), ('Office of Public Information (Defense)', NME),
-    ('Staff Council (Defense)', NME), ('Management Committee (Defense)', NME),
-    ('Comptroller of the Army', ARMY),                              # chart p. 501
+    ('Management Committee (Defense)', NME),          # heading p. 115 (Staff Council: chart box only)
     # State
     ('Mutual Defense Assistance Program', ST),                      # chart p. 498, officials p. 68
     (EURB, ST), (ARAB, ST), (FEB, ST), (NEAB, ST), (UNAB, ST), (GERB, ST),
@@ -124,20 +126,18 @@ NEW = [
     # Treasury (chart p. 499)
     ('Office of Budget (Treasury)', TRE),
     # Interior (chart p. 506)
-    ('Southeastern Power Administration', INT), ('Division of Management Research (Interior)', INT), ('Division of Property Management (Interior)', INT),
+    ('Southeastern Power Administration', INT), ('Office of the Administrative Assistant Secretary (Interior)', INT),   # heading p. 184
     # Commerce (chart p. 508)
     ('Maritime Administration', COM), ('Federal Maritime Board', COM),
     ('Office of Program Planning (Commerce)', COM), ('Office of Publications (Commerce)', COM),
-    # Labor (chart p. 509)
-    ("Veterans' Employment Service", LAB),
     # Federal Security Agency (chart p. 516)
     ('Office of Field Services (FSA)', FSA),
     # General Services Administration (chart p. 519)
     (NARS, GSA), ('Federal Register Division', NARS), ('Contract Settlement Appeal Board', GSA),
     ('Office of Comptroller (GSA)', GSA), ('Office of Management (GSA)', GSA), ('Office of General Counsel (GSA)', GSA),
-    ('Office of Public Information and Reports (GSA)', GSA), ('Compliance Division (GSA)', GSA),
-    # Housing and Home Finance Agency (chart p. 521)
-    ('Division of Slum Clearance and Urban Redevelopment', HHFA), ('Division of Housing Research', HHFA), ('Division of College Housing', HHFA),
+    ('Office of Public Information and Reports (GSA)', GSA),
+    # Housing and Home Finance Agency (chart p. 521): its three Divisions appear only as directors' titles and
+    # chart boxes; the text describes the programs ("COLLEGE HOUSING.—The ... Act authorizes the Administrator"), not offices
     # Post Office (chart p. 505)
     (BPOO, PO), (BFAC, PO), (BFIN, PO), (BTR, PO),
     ('Division of Equipment and Supplies (Post Office)', BFAC),

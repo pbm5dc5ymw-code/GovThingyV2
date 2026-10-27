@@ -20,6 +20,7 @@ ability. Keep these in mind; each has a fix built into the SKILL.md workflow.
 | Parent by history instead of heading level | 1944: National Archives Council under National Archives though it has its own top-level heading | Followed earlier coding / chairmanship | Heading level first; only "within"/"under the administration of" makes it a child |
 | Blank rows never checked | Cooperative Research and Service Division (FCA subheading) left blank | Checked only live rows | Run the evidence check on blank and dead rows too |
 | Duplicate rows both live | Office vs Bureau of the First Assistant Postmaster General | No rule | Keep the row matching the manual's wording; other Dead |
+| Job titles and chart boxes taken as units | 1950: HHFA Divisions of College Housing, Housing Research, Slum Clearance; Interior admin divisions; Veterans' Employment Service; DoD Staff Council | Treated an officials line or chart box as printed evidence | A unit needs a heading, list entry, or a description of the unit itself (evidence.py now ignores chart pages and treats OFFICIAL as weak) |
 | Rewrote a pushed commit | Amended a commit the user had already pushed | Didn't check the remote | `git fetch`; if behind or diverged, add a new commit instead of amending |
 
 ## Where hand-entered data tends to slip (useful when comparing)

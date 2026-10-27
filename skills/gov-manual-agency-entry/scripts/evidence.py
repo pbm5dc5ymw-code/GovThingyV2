@@ -6,8 +6,10 @@ classifies each place the name appears, strongest first:
   HEADING     the name alone on a line, followed by an address/phone/OFFICIALS/MEMBERS line
   SUBHEAD     the name alone on an all-capitals line (centered subheading inside another section)
   LIST        the name alone (or as a short line) on a page with an "as follows"/"includes" unit list
-  OFFICIAL    "Chief/Director/... , <name>" line in an officials list
-  RUNIN       "<NAME>.—" run-in paragraph heading
+  OFFICIAL    "Chief/Director/... , <name>" line in an officials list - a job title only; NOT enough
+  DESCRIBED   the name followed by a description of the unit itself: "<NAME>.—This office ..." or
+              "<Name> The <Name> is/was ..." (a heading without an address)
+  RUNIN       "<NAME>.—" run-in paragraph heading that describes a program or a person, not the unit
   SENTENCE    only inside running text
   NONE        not found (check spelling; the row name may be misspelled)
 The text locates evidence; confirm SENTENCE/NONE live rows and HEADING/LIST blank or dead rows on the page
@@ -20,7 +22,8 @@ ADDR = re.compile(r'(Building|Street|Avenue|NW\.|SW\.|REpublic|EXecutive|NAtiona
                   r'Telephone|Washington|Room \d|Branch \d|Officials|Members|BOARD OF|DIRECTORS|COMMISSIONERS)')
 OFFL = re.compile(r'^(Chief|Director|Commissioner|Administrator|Chairman|Head|Manager|Superintendent|President|'
                   r'Executive Director|Governor|Deputy|Assistant|Secretary|General Manager|Coordinator|Librarian)\b')
-RANK = ['HEADING', 'SUBHEAD', 'LIST', 'OFFICIAL', 'RUNIN', 'SENTENCE', 'NONE']
+RANK = ['HEADING', 'SUBHEAD', 'DESCRIBED', 'LIST', 'OFFICIAL', 'RUNIN', 'SENTENCE', 'NONE']
+UNITWORD = r'(office|division|bureau|staff|board|service|section|unit|committee|council|commission|agency|administration|corporation|branch|program)'
 
 
 def norm(s):
@@ -51,6 +54,10 @@ def offset(P):
 def body_pages(P):
     app = [k for k, v in P.items() if re.search(r'^\s*APPENDIX A\s*$', v, re.M) and k > 300]
     end = min(app) if app else max(P)
+    # organization charts are drawings, not printed evidence: drop everything from the chart list onward
+    charts = [k for k, v in P.items() if 'LIST OF ORGANIZATION CHARTS' in v and k > 300]
+    if charts:
+        end = min(end, min(charts))
     return {k: v for k, v in P.items() if k < end}
 
 
@@ -152,6 +159,9 @@ def main():
                     where.setdefault(c, []).append(k - off)
             if not found:
                 where.setdefault('SENTENCE', []).append(k - off)
+            if re.search(re.escape(used) + r' ?\.? ?(—|-)? ?this ' + UNITWORD, flat[k]) or \
+               re.search(re.escape(used) + r' the ' + re.escape(used) + r' (is|was|has|serves|performs|carries|discharges)', flat[k]):
+                where.setdefault('DESCRIBED', []).append(k - off)
             if any(used in b for b in blocks.get(k, [])):
                 where.setdefault('LIST', []).append(k - off)
             if re.search(TITLE + r'(\s+\w+){0,2}\s+(of\s+)?(the\s+)?' + re.escape(used), flat[k]):
@@ -174,7 +184,7 @@ def main():
         for x in rows:
             f.write('\t'.join(map(str, x)) + '\n')
     live = lambda s: s not in ('', 'blank', 'Dead', 'notlisted')
-    weak = [x for x in rows if live(x[2]) and x[3] in ('SENTENCE', 'NONE', 'RUNIN')]
+    weak = [x for x in rows if live(x[2]) and x[3] in ('SENTENCE', 'NONE', 'RUNIN', 'OFFICIAL')]   # a job title is not a unit
     strong_off = [x for x in rows if not live(x[2]) and x[3] in ('HEADING', 'SUBHEAD', 'LIST')]
     print(f'{len(rows)} rows; PDF page = printed + {off}; written to {out}')
     print(f'\nLive last year but weak/no evidence this year ({len(weak)}) — confirm on page or mark Dead:')

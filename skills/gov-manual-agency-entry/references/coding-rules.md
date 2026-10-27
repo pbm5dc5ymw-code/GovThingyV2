@@ -51,7 +51,17 @@ Count it if it appears as **any** of:
   agencies that have **no** "as follows" unit list; inside a cabinet department the department's own unit
   list decides (subheadings in its Activities section, e.g. Navy's JUDGE ADVOCATE GENERAL under Executive
   Offices of the Secretary, are sub-units of a listed unit and are not added),
-- a "Chief/Director, <unit>" line in an officials list (indentation shows the parent).
+- (a "Chief/Director, <unit>" line in an officials list only shows WHERE a unit sits; it is not
+  evidence by itself — see below).
+
+**Printed evidence must describe the unit itself** (user rule, 1949-50 review). Each live row needs at
+least one of: its own heading; an entry in an "as follows"/"consists of" unit list; or a run-in or
+paragraph whose subject is the unit ("OFFICE OF X.—This office ...", "The Bureau of X is responsible").
+These are NOT enough on their own:
+- a job title in an officials list ("Director, Division of College Housing");
+- a box on an organization chart (charts decide parents, not existence);
+- a paragraph describing an official ("The Director of Management Research is responsible ...");
+- a program/activity paragraph ("COLLEGE HOUSING.—The Housing Act of 1950 authorizes the Administrator").
 
 The same test applies to **every row every year** — rows carried from last year get no benefit of the
 doubt. Record the evidence type and printed page for each live row; a row with no evidence is not live.

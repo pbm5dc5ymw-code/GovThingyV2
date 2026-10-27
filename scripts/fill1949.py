@@ -68,7 +68,7 @@ rows(BF, 720)                                    # Division of Budget reappears 
 # Interior (chart p. 586)
 rows(INT, 211, 173)                              # Alaska Railroad, Alaska Road Commission on chart (FAQ: unhide)
 # Commerce (chart p. 588)
-rows(BFDC, 702)                                  # Office of Small Business back on chart (FAQ: unhide)
+# Office of Small Business (702): on the Commerce chart only, no text -> stays Dead (printed-evidence review)
 # Labor / Federal Security (charts pp. 589, 596): U. S. Employment Service transferred to FSA July 1, 1948
 rows(BES, 105)
 rows(OTHER, 848, 849)                            # Howard University, Columbia Institution: "Federally Aided Corporations" joined by a DASHED line
@@ -82,7 +82,7 @@ NEW = [
     ('Motor Carrier Claims Commission', OTHER),                     # p. 71
     ('War Claims Commission', OTHER),                               # p. 76
     ('Military Liaison Committee to the Atomic Energy Commission', NME),   # chart p. 580, officials p. 141
-    ('Personnel Policy Board', NME), ('Civilian Components Policy Board', NME),
+    ('Personnel Policy Board', NOTYET), ('Civilian Components Policy Board', NOTYET),   # 1949: chairman's title / chart box only -> not listed until 1950 headings (p. 117)
     ('Tax Advisory Staff', TRE),                                    # Treasury list p. 107
     ('Virgin Islands Company', INT),                                # chart p. 586
     ('Bureau of Federal Credit Unions', SSA),                       # chart p. 596
