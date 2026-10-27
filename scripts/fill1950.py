@@ -63,13 +63,16 @@ rows(OTHER, 8, 457)                              # Arlington Memorial Amphitheat
 rows(DEAD, 811)                                  # Aeronautical Board: appendix run-in only
 # Army (chart p. 501): no Special Staff box; its units hang directly on the Army line
 rows(DEAD, 270, 776, 780, 781)                   # Special Staff, Troop Information and Education, Civil Affairs, Special Services: not on chart
-rows(ARMY, 275, 283, 294, 539, 775, 777)         # Inspector General, Information (Public Relations), National Guard Bureau, Reserve and ROTC, Legislative Liaison, Military History
+rows(ARMY, 294)                                  # National Guard Bureau ("CHIEF, NATIONAL GUARD BUREAU.—" run-in names a Bureau)
+rows(DEAD, 275, 283, 539, 775, 777)              # Inspector General, Chief of Information, Executive for Reserve and ROTC, Chief of Legislative Liaison, Chief of Military History: run-ins name officials, not units (pp. 126-129)
 # State (chart p. 498; officials pp. 68-80): regional Divisions replaced by Offices under Bureaus
 rows(DEAD, 572, 573, 574, 575, 825, 860)         # Offices of American Republic, European, Near Eastern, Far Eastern, UN, German-Austrian Affairs -> Bureaus
 rows(DEAD, 127, 142, 143, 149, 589, 591, 594, 595, 599, 600, 603, 660, 661, 663, 664, 755, 756, 757, 758,
      828, 829, 830, 831, 864, 865, 866, 867, 868, 869)   # regional/UN/German Divisions -> new Offices (rows below)
 rows(DEAD, 666, 832, 740)                        # Labor-Social division, Economic-Property division, Map Intelligence: not listed
-rows(IAC, 140)                                   # Division of International Conferences
+# --- Format review: a unit must be set off on the page (heading, small-caps run-in, or indented unit list) ---
+rows(DEAD, 140)                                  # Division of International Conferences: plain sentence "The Division of International Conferences prepares ..." (p. 79)
+rows(DEAD, 605, 607, 612, 614, 615, 667)         # State economic "Staffs" (Aviation, Telecommunications, Commercial, Economic Resources, Petroleum, Monetary): plain sentences in the Office paragraphs (pp. 75-76)
 # Treasury (chart p. 499, list p. 86)
 # Interior (chart p. 506)
 # Commerce (chart p. 508): Maritime Commission abolished May 24, 1950 -> Maritime Administration, Federal Maritime Board
@@ -118,11 +121,9 @@ NEW = [
     ('Office of Chinese Affairs', FEB), ('Office of Northeast Asian Affairs', FEB), ('Office of Philippine and Southeast Asian Affairs', FEB),
     ('Office of Greek, Turkish, and Iranian Affairs', NEAB), ('Office of African and Near Eastern Affairs', NEAB), ('Office of South Asian Affairs', NEAB),
     ('Office of United Nations Economic and Social Affairs', UNAB), ('Office of Dependent Area Affairs', UNAB),
-    (IAC, UNAB), ('Office of United Nations Political and Security Affairs', UNAB), ('Division of International Administration', IAC),
+    (IAC, UNAB), ('Office of United Nations Political and Security Affairs', UNAB),
     ('Office of German Political Affairs', GERB), ('Office of German Economic Affairs', GERB), ('Office of German Public Affairs', GERB),
-    ('Inland Transport Policy Staff', TCP), ('Shipping Policy Staff', TCP),
-    ('International Business Practices Policy Staff', ITP),
-    ('Investment and Economic Development Staff', FDP), ('Lend-Lease and Surplus Property Staff', FDP),
+    # State economic Staffs not added: plain sentences, not set off as units (p. 75)
     # Treasury (chart p. 499)
     ('Office of Budget (Treasury)', TRE),
     # Interior (chart p. 506)

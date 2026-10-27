@@ -61,7 +61,12 @@ These are NOT enough on their own:
 - a job title in an officials list ("Director, Division of College Housing");
 - a box on an organization chart (charts decide parents, not existence);
 - a paragraph describing an official ("The Director of Management Research is responsible ...");
-- a program/activity paragraph ("COLLEGE HOUSING.—The Housing Act of 1950 authorizes the Administrator").
+- a program/activity paragraph ("COLLEGE HOUSING.—The Housing Act of 1950 authorizes the Administrator");
+- a name that is only mentioned in plain body text, not set off typographically ("The International
+  Business Practices Policy Staff discharges ..." in ordinary type) — check the page image: the unit must
+  have a bold/centered heading, a SMALL-CAPS run-in, or an indented place in a printed unit list;
+- a small-caps run-in that names an official rather than a unit ("CHIEF OF MILITARY HISTORY.—The Chief ...").
+Use scripts/format_crops.py to make contact sheets of every new or changed row and look at each one.
 
 The same test applies to **every row every year** — rows carried from last year get no benefit of the
 doubt. Record the evidence type and printed page for each live row; a row with no evidence is not live.

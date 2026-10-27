@@ -70,7 +70,7 @@ rows(INT, 211, 173)                              # Alaska Railroad, Alaska Road 
 # Commerce (chart p. 588)
 # Office of Small Business (702): on the Commerce chart only, no text -> stays Dead (printed-evidence review)
 # Labor / Federal Security (charts pp. 589, 596): U. S. Employment Service transferred to FSA July 1, 1948
-rows(BES, 105)
+rows(DEAD, 105)                                  # U. S. Employment Service: only running text inside the Bureau of Employment Security section (p. 383); no heading or run-in
 rows(OTHER, 848, 849)                            # Howard University, Columbia Institution: "Federally Aided Corporations" joined by a DASHED line
 rows('Bureau of Medical Services', 793)          # Freedmen's Hospital indented under Bureau of Medical Services in the PHS box
 # Post Office (list pp. 208-209)
