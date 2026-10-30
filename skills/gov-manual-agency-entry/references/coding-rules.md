@@ -59,6 +59,13 @@ needs, in that year's chapter text, its name set off typographically (bold/cente
 run-in "OFFICE OF X.—This office ...") and then a description of the unit. Appendix, charts, unit lists and
 branch lists support a decision but do not qualify a unit alone. Example: "National Archives Trust Fund Board"
 (bold, then a description) is in; "Division of Transportation Accounts" (named inside a sentence) is out.
+What "set off" looks like differs by edition, so check a few pages of each edition first:
+- 1944-48 (one column): bold centered headings, smaller centered capitals inside a section ("GENERAL BOARD OF
+  THE NAVY"), or a paragraph opening in capitals and small capitals ("Division of Traffic.—This Division ...").
+  A State geographic division's description may be only its territory ("Division of African Affairs.—Ethiopia,
+  Liberia, ..."); that counts. Several units named in one run-in count.
+- 1949: same headings, with run-ins in full small capitals.
+- 1950 (two columns): bold headings and "OFFICE OF X.—" run-ins; Divisions under Offices are plain text.
 These are NOT enough on their own:
 - a job title in an officials list ("Director, Division of College Housing");
 - a box on an organization chart (charts decide parents, not existence);

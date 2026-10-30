@@ -33,6 +33,14 @@ ability. Keep these in mind; each has a fix built into the SKILL.md workflow.
 - Keep additions at the depth used in earlier years; sub-bureau run-ins (Internal Revenue units, Public Debt
   divisions, VA offices) qualify by format but would make 1949-50 inconsistent with 1935-48. Ask first.
 
+## Format-priority review of 1944-48
+- Hand-entered cells can carry trailing spaces ("Yes "). Strip before testing a code, or live agencies look
+  unlisted (NLRB and the Smithsonian looked unlisted until this was caught).
+- Agency names repeat across departments ("Bureau of Accounts", "Office of the Secretary"). Match a heading only
+  inside the unit's own department pages, using the running page headers for the range, and treat a parent as
+  gone only if no row of that name is live that year.
+- Review both directions: live rows with no set-off text, and dead or unlisted rows that are set off in print.
+
 ## Where hand-entered data tends to slip (useful when comparing)
 - Agencies that ended in earlier years left alive (renamed or abolished 1-2 years before).
 - Existing agencies marked Dead (often units inside another agency's section).
