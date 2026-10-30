@@ -54,17 +54,20 @@ Count it if it appears as **any** of:
 - (a "Chief/Director, <unit>" line in an officials list only shows WHERE a unit sits; it is not
   evidence by itself — see below).
 
-**Printed evidence must describe the unit itself** (user rule, 1949-50 review). Each live row needs at
-least one of: its own heading; an entry in an "as follows"/"consists of" unit list; or a run-in or
-paragraph whose subject is the unit ("OFFICE OF X.—This office ...", "The Bureau of X is responsible").
+**Format comes first: a set-off name followed by a description** (user rule, 1949-50 review). Each live row
+needs, in that year's chapter text, its name set off typographically (bold/centered heading or SMALL-CAPS
+run-in "OFFICE OF X.—This office ...") and then a description of the unit. Appendix, charts, unit lists and
+branch lists support a decision but do not qualify a unit alone. Example: "National Archives Trust Fund Board"
+(bold, then a description) is in; "Division of Transportation Accounts" (named inside a sentence) is out.
 These are NOT enough on their own:
 - a job title in an officials list ("Director, Division of College Housing");
 - a box on an organization chart (charts decide parents, not existence);
 - a paragraph describing an official ("The Director of Management Research is responsible ...");
 - a program/activity paragraph ("COLLEGE HOUSING.—The Housing Act of 1950 authorizes the Administrator");
 - a name that is only mentioned in plain body text, not set off typographically ("The International
-  Business Practices Policy Staff discharges ..." in ordinary type) — check the page image: the unit must
-  have a bold/centered heading, a SMALL-CAPS run-in, or an indented place in a printed unit list;
+  Business Practices Policy Staff discharges ..." in ordinary type) — check the page image;
+- a name that appears only in a list or sentence naming several units ("comprises a Division of X and a
+  Division of Y"), or only in a directory table with a heading (U. S. Attorneys and Marshals, 1950);
 - a small-caps run-in that names an official rather than a unit ("CHIEF OF MILITARY HISTORY.—The Chief ...").
 Use scripts/format_crops.py to make contact sheets of every new or changed row and look at each one.
 

@@ -72,9 +72,18 @@ rows(INT, 211, 173)                              # Alaska Railroad, Alaska Road 
 # Labor / Federal Security (charts pp. 589, 596): U. S. Employment Service transferred to FSA July 1, 1948
 rows(DEAD, 105)                                  # U. S. Employment Service: only running text inside the Bureau of Employment Security section (p. 383); no heading or run-in
 rows(OTHER, 848, 849)                            # Howard University, Columbia Institution: "Federally Aided Corporations" joined by a DASHED line
-rows('Bureau of Medical Services', 793)          # Freedmen's Hospital indented under Bureau of Medical Services in the PHS box
 # Post Office (list pp. 208-209)
 rows(DEAD, 390)                                  # Division of Post Office Service replaced by new First Assistant divisions
+
+# --- Format-priority review: a unit needs its name set off (bold/centered heading or small-caps run-in) AND a description of the unit ---
+rows(DEAD, 793)                                  # Freedmen's Hospital: one sentence inside the Bureau of Medical Services section (p. 386)
+rows(DEAD, 794)                                  # Office of Special Services (FSA): no heading; only a historical mention (p. 377)
+rows('Federal Security Agency', 46, 478, 561, 795, 796)   # FDA, Vocational Rehabilitation, Employees' Compensation and its Appeals Board: own headings directly in the FSA section
+rows(DEAD, 214, 217, 228, 556)                   # Navy Under and Assistant Secretaries, Executive Office of the Secretary: not set off (pp. 165-168)
+rows(DEAD, 252, 263, 692)                        # Treasury Tax Research, Tax Legislative Counsel, Public Relations: sentence only or not printed (p. 111)
+rows(DEAD, 278, 283, 775, 776)                   # Army Finance, Public Relations ("CHIEF OF INFORMATION.--" names an official), Legislative and Liaison, Troop Information: not set off as units (pp. 153-158)
+rows(DEAD, 407, 408, 418, 423)                   # Post Office Registered Mails, Cost Ascertainment, Mail Equipment Shops, Accounts and Reports: list only (p. 209)
+rows(DEAD, 614, 643, 682, 740, 792, 811)         # Commodities, Methods and Procedures, National Intelligence Authority, Map Intelligence, Appeals Council, Aeronautical Board: no set-off text
 
 NEW = [
     (GSA, OTHER),                                                   # p. 417
@@ -92,6 +101,17 @@ NEW = [
     ('Division of Southwest European Affairs', EUR), ('Division of Southeast European Affairs', EUR),
     ('Division of Budget and Administrative Services (Post Office)', B1), ('Division of Post Office Clerical Service', B1),
     ('Division of City Delivery Service', B1), ('Division of Post Office Personnel', B1), ('Division of Rural Delivery Service', B1),
+    # Format-priority review: set-off heading or run-in with a description, and no row yet
+    ('National Archives Trust Fund Board', 'National Archives'), ('Administrative Committee of the Federal Register', 'National Archives'),   # p. 450
+    ('Armed Forces Staff College', 'Joint Chiefs of Staff'),        # p. 164
+    ('Institute of Inter-American Affairs', ST),                    # p. 101
+    ('UNESCO Relations Staff', ST),                                 # p. 94
+    ('National Housing Council', 'Housing and Home Finance Agency'),   # p. 418
+    ('National Selective Service Appeal Board', 'Selective Service System'),   # p. 484
+    ('Federal Open Market Committee', 'Board of Governors of the Federal Reserve System'),   # p. 368
+    ('Office of Medical Services (Defense)', NME),                  # "Medical Services Division" p. 145
+    ('Office of Civil Defense Planning', NME), ('Military Renegotiation Policy and Review Board', NME),   # p. 145
+    ('Division of Liquidation', COM), ('Office of Industry Cooperation', COM),   # pp. 290-291
 ]
 
 

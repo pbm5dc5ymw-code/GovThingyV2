@@ -24,6 +24,15 @@ ability. Keep these in mind; each has a fix built into the SKILL.md workflow.
 | Names in plain body text taken as units | 1950: State economic "Staffs", Division of International Administration, Army "CHIEF OF ..." run-ins | Text search found the name; layout never checked | Contact-sheet review of every new/changed row (format_crops.py); unit must be typographically set off |
 | Rewrote a pushed commit | Amended a commit the user had already pushed | Didn't check the remote | `git fetch`; if behind or diverged, add a new commit instead of amending |
 
+## Format-priority review of 1949-50
+- The same units can change format between editions: State and Post Office divisions are run-ins in 1949
+  but plain sentences or lists in 1950. Judge each edition from its own pages; do not carry a verdict over.
+- The OCR text layer has no bold and often truncates headings, so "no match" is not "no heading". Before
+  removing a row, check the current name: rows keep old names after renames (row "Office of Field Operations"
+  is printed "Office of Field Service"). Three removals were caught this way on re-check.
+- Keep additions at the depth used in earlier years; sub-bureau run-ins (Internal Revenue units, Public Debt
+  divisions, VA offices) qualify by format but would make 1949-50 inconsistent with 1935-48. Ask first.
+
 ## Where hand-entered data tends to slip (useful when comparing)
 - Agencies that ended in earlier years left alive (renamed or abolished 1-2 years before).
 - Existing agencies marked Dead (often units inside another agency's section).

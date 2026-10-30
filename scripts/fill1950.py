@@ -100,6 +100,21 @@ rows(DEAD, 841)                                  # Administrator, Research and M
 rows(NME, 855, 856)                              # Personnel Policy Board, Civilian Components Policy Board: own headings p. 117
 rows(DEAD, 553, 554, 699)                        # Interior Budget and Finance, Personnel, Administrative Services: described only as "The Director of ... is responsible" (p. 184)
 
+# --- Format-priority review: a unit needs its name set off (bold/centered heading or small-caps run-in) AND a description of the unit ---
+rows(DEAD, 123, 129, 138, 166, 170, 617, 620, 677, 678, 720, 721, 723, 724, 725, 726, 727, 728, 734, 737, 739,
+     741, 742, 743, 759, 760, 761, 762, 763, 764, 765, 834, 836)   # State Divisions: plain sentences under the small-caps Offices (pp. 73-80)
+rows(DEAD, 391, 396, 398, 402, 403, 404, 406, 407, 408, 412, 413, 414, 415, 416, 417, 423, 641, 642, 772, 773,
+     870, 871, 872, 873, 874)                    # Post Office Divisions: named only inside sentences under the Bureaus (pp. 175-179)
+rows(DEAD, 214, 217, 228)                        # Navy Under and Assistant Secretaries: named only inside "Civilian Executive Assistants" (p. 137)
+rows(DEAD, 87, 88, 252, 692)                     # Justice assistants, Tax Research, Treasury Public Relations: abolished or not printed
+rows(DEAD, 693, 694)                             # U.S. Attorneys and Marshals: only a directory table (p. 159)
+rows(DEAD, 794, 793)                             # Office of Special Services: gone; Freedmen's Hospital: one sentence in the Bureau of Medical Services section (p. 335)
+rows(FSA, 46, 478, 561)                          # FDA, Vocational Rehabilitation: own headings directly in the FSA section
+rows(TRE, 263)                                   # Tax Legislative Counsel: own heading (p. 85), sentence only in 1949 (FAQ: unhide)
+rows(ARMY, 278)                                  # "CHIEF OF FINANCE.--" run-in (p. 129), same format as the other Army services kept (FAQ: unhide)
+named(NARS, 'National Archives Trust Fund Board', 'Administrative Committee of the Federal Register')   # p. 355
+named(DEAD, 'Office of Civil Defense Planning', 'Military Renegotiation Policy and Review Board', 'Division of Liquidation', 'Office of Industry Cooperation')   # officials or index only
+
 NEW = [
     ('Air Coordinating Committee', OTHER),                          # p. 286
     ('Commodity Exchange Commission', OTHER),                       # p. 295
@@ -109,7 +124,8 @@ NEW = [
     ('Panama Railroad Company', 'The Panama Canal'),                # p. 397
     ('Fair Employment Board', 'United States Civil Service Commission'),   # p. 435
     # Department of Defense (chart p. 500)
-    ('Office of Medical Services (Defense)', NME), ('Office of Public Information (Defense)', NME),
+    ('Office of Public Information (Defense)', NME),
+    ('Army Policy Council', ARMY),                                  # p. 125
     ('Management Committee (Defense)', NME),          # heading p. 115 (Staff Council: chart box only)
     # State
     ('Mutual Defense Assistance Program', ST),                      # chart p. 498, officials p. 68
@@ -141,8 +157,7 @@ NEW = [
     # chart boxes; the text describes the programs ("COLLEGE HOUSING.—The ... Act authorizes the Administrator"), not offices
     # Post Office (chart p. 505)
     (BPOO, PO), (BFAC, PO), (BFIN, PO), (BTR, PO),
-    ('Division of Equipment and Supplies (Post Office)', BFAC),
-    ('Division of Highway and Contract Transportation', BTR), ('Division of Transportation Accounts', BTR),
+    # Divisions not added: named only inside sentences under the Bureaus (pp. 177-179)
 ]
 
 shutil.copy(SRC, DST)
