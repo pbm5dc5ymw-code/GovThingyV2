@@ -62,9 +62,10 @@ rows(OTHER, 8, 457)                              # Arlington Memorial Amphitheat
 # Department of Defense (chart p. 500); Navy chart p. 502 unchanged
 rows(DEAD, 811)                                  # Aeronautical Board: appendix run-in only
 # Army (chart p. 501): no Special Staff box; its units hang directly on the Army line
-rows(DEAD, 270, 776, 780, 781)                   # Special Staff, Troop Information and Education, Civil Affairs, Special Services: not on chart
+rows(DEAD, 776, 780, 781)                        # Troop Information and Education, Civil Affairs, Special Services: not on chart, no run-in
+rows(ARMY, 270)                                  # Special Staff: heading with a description (p. 129); no box on the chart, so its members stay on the Army line
 rows(ARMY, 294)                                  # National Guard Bureau ("CHIEF, NATIONAL GUARD BUREAU.—" run-in names a Bureau)
-rows(DEAD, 275, 283, 539, 775, 777)              # Inspector General, Chief of Information, Executive for Reserve and ROTC, Chief of Legislative Liaison, Chief of Military History: run-ins name officials, not units (pp. 126-129)
+rows(ARMY, 275, 283, 539, 775, 777)              # Inspector General, Chief of Information, Executive for Reserve and ROTC, Chief of Legislative Liaison, Chief of Military History: run-ins with descriptions (pp. 127-129)
 # State (chart p. 498; officials pp. 68-80): regional Divisions replaced by Offices under Bureaus
 rows(DEAD, 572, 573, 574, 575, 825, 860)         # Offices of American Republic, European, Near Eastern, Far Eastern, UN, German-Austrian Affairs -> Bureaus
 rows(DEAD, 127, 142, 143, 149, 589, 591, 594, 595, 599, 600, 603, 660, 661, 663, 664, 755, 756, 757, 758,

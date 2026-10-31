@@ -8,6 +8,8 @@ one column, so "set off" reads differently from the two-column 1950 edition:
   - The description may be only the territory a division covers ("Division of Near Eastern Affairs.--Egypt, ..."):
     in these editions that is how every State geographic division is described, so it counts.
   - Several units named together in one run-in count ("Policy and Post-War Programs Committees.--").
+  - A set-off name followed by a description counts even when the name is a position ("Office of the Chief
+    of Engineers.--The Chief of Engineers is responsible ..."). A position only in an officials list does not.
 Not set off: a name in a plain paragraph, in the "as follows" unit lists set in two columns, in an officials
 list, or on a chart. Charts begin these editions' back matter and still only decide parents.
 
@@ -32,11 +34,10 @@ DEAD = 'DEAD'
 REMOVE = {
     4: (1944,),                        # AAA: renamed Agricultural Adjustment Agency; sentence only (p. 364)
     60: ALL, 215: (1944, 1945, 1946, 1947), 698: (1946, 1947, 1948),   # Offices of the Secretary (Commerce, Navy, Interior): lists only
-    95: ALL,                           # Office of the Attorney General: sentence under "The Attorney General.--" (1948 p. 202)
     207: (1946, 1947, 1948),           # Puerto Rico Reconstruction Administration: officials and lists only (1947 p. 232)
     214: (1944, 1945, 1946, 1947), 217: ALL, 228: ALL,                 # Navy Under and Assistant Secretaries: officials only
     281: (1944, 1945), 537: (1944,),   # Army Morale Branch, Armored Force: not printed as units
-    283: (1947, 1948),                 # Bureau of Public Relations: gone; "Chief of Information.--" names an official
+    278: (1944, 1945), 539: (1944,),   # Chief of Finance, Executive for Reserve and ROTC: officials lists only (1944 p. 245)
     311: (1944, 1945),                 # Federal Committee on Apprenticeship: appendix only
     319: (1944,),                      # Federal Farm Mortgage Corporations: no such name printed
     390: ALL,                          # Division of Post Office Service: no such name printed
@@ -73,9 +74,10 @@ RESTORE = {
     173: {1944: INT, 1945: INT},       # Alaska Road Commission run-in (1944 p. 332)
     197: {1946: INT, 1947: INT, 1948: INT},   # Office of the Chief Clerk heading (1946 p. 275)
     270: {1944: WAR, 1945: WAR},       # Special Staff heading (1944 p. 252)
-    775: {1944: SS, 1945: SS, 1946: SS}, 777: {1946: SS}, 778: {1944: SS, 1946: SS},
+    775: {1944: SS, 1945: SS, 1946: SS}, 777: {1946: SS}, 778: {1944: SS, 1945: SS, 1946: SS},
     779: {1945: SS}, 780: {1945: SS, 1946: SS},   # Special Staff divisions: run-ins (1944 p. 252, 1946 pp. 199-200)
     811: {1944: WAR, 1945: WAR, 1946: WAR, 1947: WAR}, 813: {1947: WAR},   # Aeronautical Board, Explosives Safety Board (1947 pp. 170-172)
+    283: {1947: WAR, 1948: 'Department of the Army'},   # "Chief of Information" heading with a description, before the staffs (1947 p. 160, 1948 p. 150)
     854: {1948: NME},                  # Military Liaison Committee heading (p. 161)
     112: {y: CSC for y in ALL},        # Board of Appeals and Review run-in (1948 p. 494)
     433: {1945: RFC}, 434: {1945: RFC}, 435: {1945: RFC}, 436: {1945: RFC},   # RFC subsidiaries: run-ins (pp. 407-408)

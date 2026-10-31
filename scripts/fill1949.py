@@ -81,7 +81,8 @@ rows(DEAD, 794)                                  # Office of Special Services (F
 rows('Federal Security Agency', 46, 478, 561, 795, 796)   # FDA, Vocational Rehabilitation, Employees' Compensation and its Appeals Board: own headings directly in the FSA section
 rows(DEAD, 214, 217, 228, 556)                   # Navy Under and Assistant Secretaries, Executive Office of the Secretary: not set off (pp. 165-168)
 rows(DEAD, 252, 263, 692)                        # Treasury Tax Research, Tax Legislative Counsel, Public Relations: sentence only or not printed (p. 111)
-rows(DEAD, 278, 283, 775, 776)                   # Army Finance, Public Relations ("CHIEF OF INFORMATION.--" names an official), Legislative and Liaison, Troop Information: not set off as units (pp. 153-158)
+rows(DEAD, 278, 775, 776)                        # Army Finance, Legislative and Liaison, Troop Information: named only inside other paragraphs or officials lists (pp. 149-158)
+rows('Department of the Army', 283)              # "CHIEF OF INFORMATION.--" run-in with a description (p. 153)
 rows(DEAD, 407, 408, 418, 423)                   # Post Office Registered Mails, Cost Ascertainment, Mail Equipment Shops, Accounts and Reports: list only (p. 209)
 rows(DEAD, 614, 643, 682, 740, 792, 811)         # Commodities, Methods and Procedures, National Intelligence Authority, Map Intelligence, Appeals Council, Aeronautical Board: no set-off text
 
