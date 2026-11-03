@@ -67,3 +67,12 @@ The 1952-53 scan skips printed pp. 386-387 and its offset changes (+12 for pp. 5
 rendering. Commerce now describes its staff offices in plain paragraphs under bold Assistant Secretary sections, so
 they end. Look at every chapter's page images for bold "Office of ..." headings, not only the rows the matcher flags:
 the 1951 Navy Offices of Naval Material and Naval Research were missed that way and filled in 1952.
+
+## 1953 (2026-11-03)
+The 1953-54 scan has a constant offset (+9). New executive department (HEW): give it a new row and end the Federal
+Security Agency row, because Reorganization Plan 1 of 1953 abolished the FSA rather than renaming it. Every year,
+also sweep the dead and unlisted rows against standalone heading lines in the new text (a line that is exactly
+the row's name, followed by CREATION/PURPOSE or "The ... is"). That sweep and the HHFA/GSA page images showed three
+rows wrongly coded Dead since 1950-51: Federal Home Loan Bank System, Federal National Mortgage Association, and
+National Archives Trust Fund Board. Their bold headings had been cut short in OCR ("Federal National M"), and the
+earlier passes read the cut-short text as "sentences only". Confirm on the image before calling a unit unprinted.
