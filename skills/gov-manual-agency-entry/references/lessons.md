@@ -47,3 +47,10 @@ ability. Keep these in mind; each has a fix built into the SKILL.md workflow.
 - Whole departments' sub-units left blank or coded "not listed" (War Department in 1943).
 - Mixing two editions of the same year.
 Treat hand differences as hypotheses to check on the page, not as errors to copy or ignore.
+
+## Agency, not position (2026-11-03)
+Earlier passes accepted a set-off title with a description ("THE INSPECTOR GENERAL.—The Inspector General ...").
+The user's rule is that the set-off name itself must name an agency (Office, Bureau, Corps, Department, Division,
+Board, Staff ...). Scan every edition for run-ins and bold headings that are titles (Chief of, Director of, The X
+General, Adviser, Secretary) and check which rows rest on them. Also re-check "Office of the Secretary" rows:
+in 1948-49 several were only in unit lists or officials lists.

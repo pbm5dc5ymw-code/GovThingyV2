@@ -76,11 +76,17 @@ These are NOT enough on their own:
 - a name that appears only in a list or sentence naming several units ("comprises a Division of X and a
   Division of Y"), or only in a directory table with a heading (U. S. Attorneys and Marshals, 1950);
 
-The two tests are (1) formatting and (2) a description in the text. A set-off name with a description counts
-even when the name is a position ("CHIEF OF MILITARY HISTORY.—The Chief of Military History is charged with ...");
-a position that is only listed elsewhere does not. Army service chiefs are judged this way, row by row and year
-by year. Do not add units below the depth 1935-48 use, such as Navy boards or Veterans Administration offices,
-even if they pass both tests.
+The user's three requirements (2026-11-03), all needed:
+1. The set-off name is an **agency, not a position**. "OFFICE OF THE CHIEF OF ENGINEERS.—", "CORPS OF
+   ENGINEERS.—", "Office of the Solicitor General" pass. "CHIEF OF ENGINEERS.—", "THE ATTORNEY GENERAL.—",
+   "LEGAL ADVISER.—", "CHIEF, NATIONAL GUARD BUREAU.—", a bold "Director of Liquidation" or "Secretary of the
+   Navy" fail, even with a description. One exception kept: a bold title whose text describes the Office as an
+   organization ("The Chief of Naval Operations" / "The Office of the Chief of Naval Operations is organized ...").
+2. **Formatting** sets the agency apart: usually bold; a capitals-and-small-capitals run-in also counts.
+3. A **description** of the agency follows.
+A name only in a unit list or officials list fails. Army service chiefs are judged this way, row by row and year
+by year (1950 prints every chief as an official, so they are all off in 1950). Do not add units below the depth
+1935-48 use, such as Navy boards or Veterans Administration offices, even if they pass.
 Use scripts/format_crops.py to make contact sheets of every new or changed row and look at each one.
 
 The same test applies to **every row every year** — rows carried from last year get no benefit of the
