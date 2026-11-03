@@ -54,3 +54,10 @@ The user's rule is that the set-off name itself must name an agency (Office, Bur
 Board, Staff ...). Scan every edition for run-ins and bold headings that are titles (Chief of, Director of, The X
 General, Adviser, Secretary) and check which rows rest on them. Also re-check "Office of the Secretary" rows:
 in 1948-49 several were only in unit lists or officials lists.
+
+## 1951 (2026-11-03)
+The 1951-52 edition is two columns like 1950, but Interior and Commerce now head the Secretary's staff with bold job
+titles, so staff divisions that were rows in 1950 drop out. Compare every live row to the new edition's headings,
+then sweep each chapter's headings for units with no row: this found units printed in 1950 that never got rows
+(Air Force major commands, Post Office staff offices, Postal Savings System, Weapons Systems Evaluation Group).
+Scratchpad tools used: inv2.py (two-column heading/run-in inventory), cmp51.py, dept.py (per-chapter comparison).
