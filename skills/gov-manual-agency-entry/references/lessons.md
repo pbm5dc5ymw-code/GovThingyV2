@@ -61,3 +61,9 @@ titles, so staff divisions that were rows in 1950 drop out. Compare every live r
 then sweep each chapter's headings for units with no row: this found units printed in 1950 that never got rows
 (Air Force major commands, Post Office staff offices, Postal Savings System, Weapons Systems Evaluation Group).
 Scratchpad tools used: inv2.py (two-column heading/run-in inventory), cmp51.py, dept.py (per-chapter comparison).
+
+## 1952 (2026-11-03)
+The 1952-53 scan skips printed pp. 386-387 and its offset changes (+12 for pp. 57-385, +10 after): map pages before
+rendering. Commerce now describes its staff offices in plain paragraphs under bold Assistant Secretary sections, so
+they end. Look at every chapter's page images for bold "Office of ..." headings, not only the rows the matcher flags:
+the 1951 Navy Offices of Naval Material and Naval Research were missed that way and filled in 1952.
