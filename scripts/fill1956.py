@@ -12,10 +12,11 @@ description. Every row live in 1955 was matched to its 1956 heading; changed uni
   - State: new bold Bureau of Economic Affairs (p. 86) over the Offices of International Financial and Development
     Affairs, International Trade and Resources, and Transport and Communications. The Policy Planning Staff and the
     Executive Secretariat are now described only under an Assistant Secretary heading and a "DIRECTOR, ..." run-in
-    (pp. 80, 83). New run-ins: Special Projects Staff (intelligence, p. 81), Office of Inter-American Regional
-    Economic Affairs (p. 84), Office of Southwest Pacific Affairs (p. 85), Personnel Projects Staff, Office of Deputy
-    Assistant Secretary for Operations, Clemency and Parole Board (pp. 86-87), Office of Refugee and Migration
-    Affairs (p. 89).
+    (pp. 80, 83). New offices and staffs inside bureaus or the Controller's area are organizational units, not
+    agencies, so they are not added (user decision, 2026-11-10): Special Projects Staff (p. 81), Office of
+    Inter-American Regional Economic Affairs (p. 84), Office of Southwest Pacific Affairs (p. 85), Personnel
+    Projects Staff, Office of Deputy Assistant Secretary for Operations, Clemency and Parole Board (pp. 86-87),
+    Office of Refugee and Migration Affairs (p. 89). Units carried from earlier years keep their coding.
   - Post Office: "BUREAU OF THE CHIEF POSTAL INSPECTOR.--" is a run-in with a description again (p. 204).
   - Navy: new bold Naval Research Advisory Committee (p. 168). HEW: the Offices of Inspection and of the Comptroller
     are not printed (p. 320).
@@ -42,7 +43,7 @@ HEW = 'Department of Health, Education, and Welfare'
 CABINET = {AG, COM, JUS, LAB, ST, INT, TRE, PO, NME, HEW}
 DEAD, NOTYET, OTHER, CAB = 'DEAD', 'NOTYET', 'OTHER', 'CAB'
 BEA, FCDA, NAVY = 'Bureau of Economic Affairs', 'Federal Civil Defense Administration', 'Department of the Navy'
-BSCA, GSA = 'Bureau of Security and Consular Affairs', 'General Services Administration'
+GSA = 'General Services Administration'
 
 
 def vals(c):
@@ -75,12 +76,7 @@ rows(FCDA, 1107)                                # Civil Defense Coordinating Boa
 
 NEW = [
     # State (pp. 81-89)
-    ('International Cooperation Administration', ST), ('Special Projects Staff (State)', ST),
-    ('Office of Inter-American Regional Economic Affairs', 'Bureau of Inter-American Affairs'),
-    ('Office of Southwest Pacific Affairs', 'Bureau of Far Eastern Affairs'),
-    (BEA, ST), ('Personnel Projects Staff (State)', ST),
-    ('Office of the Deputy Assistant Secretary for Operations (State)', ST), ('Clemency and Parole Board', ST),
-    ('Office of Refugee and Migration Affairs', BSCA),
+    ('International Cooperation Administration', ST), (BEA, ST),
     # Navy (p. 168)
     ('Naval Research Advisory Committee', NAVY),
     # Independent agencies

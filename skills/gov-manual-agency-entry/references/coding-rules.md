@@ -160,3 +160,9 @@ Specific rules learned:
 | Pre-set blank rows for units that exist | Fill them | Fill them |
 | Which 1943 edition | December 1943 | Mixed June/December |
 | Joint Chiefs of Staff as a row (OSS parent) | Added as "other" | — |
+
+## No new organizational units (user decision, 2026-11-10)
+Focus on actual agencies. From 1956 on, do not add new offices, staffs or boards that sit inside a bureau, an
+Assistant Secretary's area or a department's administrative office (e.g. State's "Office of Inter-American Regional
+Economic Affairs", "Office of Refugee and Migration Affairs", "Personnel Projects Staff"), even when they are set off
+with a description. Rows carried from earlier years keep their coding unless the user asks for a wider cleanup.
