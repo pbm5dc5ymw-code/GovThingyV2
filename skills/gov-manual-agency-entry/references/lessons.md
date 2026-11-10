@@ -83,3 +83,8 @@ sessions; rebuild with pymupdf, openpyxl and pillow. The pymupdf text of this ed
 so exact-line heading matches miss many real headings: search the flattened page text for "Name The ..." or
 "Name CREATION" and confirm on the page image. For a renamed bureau whose children already name it as parent
 (e.g. the State consular bureau), keep the row name so the children's parent cells stay valid.
+
+## 1955 (2026-11-10)
+The 1955-56 edition (revised June 1, 1955) has a constant offset (+8). A unit can drop to a plain list one year
+and come back as a run-in the next (Commerce staff offices 1952-54 vs 1955; State's Foreign Service Institute and
+Inspection Corps): reuse the dead row rather than adding a duplicate. Search dead rows by name before adding.
