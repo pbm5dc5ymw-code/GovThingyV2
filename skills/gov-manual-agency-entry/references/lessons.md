@@ -88,3 +88,9 @@ so exact-line heading matches miss many real headings: search the flattened page
 The 1955-56 edition (revised June 1, 1955) has a constant offset (+8). A unit can drop to a plain list one year
 and come back as a run-in the next (Commerce staff offices 1952-54 vs 1955; State's Foreign Service Institute and
 Inspection Corps): reuse the dead row rather than adding a duplicate. Search dead rows by name before adding.
+
+## 1956 (2026-11-10)
+The 1956-57 scan repeats printed pp. 178-179 (PDF 186-189), so the offset is +8 through p. 179 and +10 after: check
+for repeated or missing pages whenever the offset changes. Staffs can lose their own run-in and be described only
+under an Assistant Secretary or "DIRECTOR, ..." heading (State Policy Planning Staff, Executive Secretariat): that
+ends the row under the agency-not-position rule.
