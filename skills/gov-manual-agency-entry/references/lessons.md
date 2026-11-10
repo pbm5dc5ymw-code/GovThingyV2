@@ -76,3 +76,10 @@ the row's name, followed by CREATION/PURPOSE or "The ... is"). That sweep and th
 rows wrongly coded Dead since 1950-51: Federal Home Loan Bank System, Federal National Mortgage Association, and
 National Archives Trust Fund Board. Their bold headings had been cut short in OCR ("Federal National M"), and the
 earlier passes read the cut-short text as "sentences only". Confirm on the image before calling a unit unprinted.
+
+## 1954 (2026-11-10)
+The 1954-55 scan has a constant offset (+8). The scratchpad (venv and helper scripts) can be wiped between
+sessions; rebuild with pymupdf, openpyxl and pillow. The pymupdf text of this edition splits lines differently,
+so exact-line heading matches miss many real headings: search the flattened page text for "Name The ..." or
+"Name CREATION" and confirm on the page image. For a renamed bureau whose children already name it as parent
+(e.g. the State consular bureau), keep the row name so the children's parent cells stay valid.
