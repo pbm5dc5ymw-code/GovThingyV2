@@ -166,3 +166,9 @@ Focus on actual agencies. From 1956 on, do not add new offices, staffs or boards
 Assistant Secretary's area or a department's administrative office (e.g. State's "Office of Inter-American Regional
 Economic Affairs", "Office of Refugee and Migration Affairs", "Personnel Projects Staff"), even when they are set off
 with a description. Rows carried from earlier years keep their coding unless the user asks for a wider cleanup.
+Applied back to 1944-1956 on 2026-11-10 by scripts/remove_org_units_1944_1956.py (run after fill1956.py), from the
+reviewed list in data/Organizational units review 1944-1956.xlsx: 412 rows, 2,014 row-years set to Dead. The user
+removed every "Check" row too: Justice's litigating divisions, the Army technical services, the Air Force commands,
+Navy headquarters offices, the Public Health Service bureaus, and the services inside the information and technical
+cooperation administrations. Do not revive these rows in later years. Exception kept: FSA Office of Special
+Services (1947 umbrella over FDA and other agencies). 1935-1943 untouched.
