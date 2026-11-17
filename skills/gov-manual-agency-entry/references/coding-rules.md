@@ -172,3 +172,8 @@ removed every "Check" row too: Justice's litigating divisions, the Army technica
 Navy headquarters offices, the Public Health Service bureaus, and the services inside the information and technical
 cooperation administrations. Do not revive these rows in later years. Exception kept: FSA Office of Special
 Services (1947 umbrella over FDA and other agencies). 1935-1943 untouched.
+
+## 1957 Guide to Selected Boards, Committees, and Commissions (user decision, 2026-11-17)
+From the 1957-58 edition the Manual moves many boards and committees into an end-of-book Guide (capitals run-ins
+with descriptions). Rows already in the sheet that appear there stay live with their coding; Guide entries that are
+not already rows are not added (presidential advisory committees, memorial and centennial commissions, etc.).

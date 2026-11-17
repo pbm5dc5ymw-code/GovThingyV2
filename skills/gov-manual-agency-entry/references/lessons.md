@@ -94,3 +94,8 @@ The 1956-57 scan repeats printed pp. 178-179 (PDF 186-189), so the offset is +8 
 for repeated or missing pages whenever the offset changes. Staffs can lose their own run-in and be described only
 under an Assistant Secretary or "DIRECTOR, ..." heading (State Policy Planning Staff, Executive Secretariat): that
 ends the row under the agency-not-position rule.
+
+## 1957 (2026-11-17)
+The 1957-58 scan skips printed pp. 109-110 and repeats pp. 512-513: offset +10 through p. 108, +8 for pp. 111-513,
++10 from p. 514. Rows that leave the agency chapters may be in the new Guide (pp. 521-529); search it before calling
+a row unprinted. Navy bureaus are margin side-headings that the heading inventory misses; confirm in the text.
