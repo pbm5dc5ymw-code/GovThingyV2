@@ -21,6 +21,12 @@ heading; changed units were read on the page images.
     Disposal Commission (Federal Facilities Corporation is its successor, p. 102).
   - Farm Credit: the production credit corporations merged into the intermediate credit banks January 1, 1957; the
     PRODUCTION CREDIT ASSOCIATIONS heading continues on row 428 (p. 359).
+  - Verification pass (user request, 2026-11-17): every live row was checked on the page image for the three
+    requirements, with the printed page recorded in data/Evidence 1957-1958.xlsx. Ended for lack of evidence: Bureau
+    of Economic Affairs (only an Assistant Secretary heading, p. 87), The Alaska Railroad (named in a list of the
+    Office of Territories' functions, p. 230), Alaska Road Commission and Federal Committee on Apprenticeship (not
+    printed). Added: Office of the United States Commissioner General, Brussels Universal and International
+    Exhibition, 1958 (bold heading with a Creation and Authority paragraph, p. 93).
 Renames keep the same row: Fish and Wildlife Service -> United States Fish and Wildlife Service (190); Emergency
 Procurement Service -> Defense Materials Service (1011, September 7, 1956, p. 405).
 """
@@ -54,6 +60,12 @@ O = {}
 def rows(code, *row_numbers):
     O.update({r: code for r in row_numbers})
 
+# Verification pass (2026-11-17): every live row checked on the page image; these have no qualifying evidence
+rows(DEAD, 1114)                                # Bureau of Economic Affairs: only the position heading "Assistant
+                                                # Secretary for Economic Affairs" (p. 87)
+rows(DEAD, 211)                                 # The Alaska Railroad: only in the Office of Territories' list of
+                                                # functions (p. 230)
+rows(DEAD, 173, 311)                            # Alaska Road Commission, Federal Committee on Apprenticeship: not printed
 # Independent agencies
 rows(DEAD, 1040)                                # National Security Training Commission: Appendix A only (p. 648)
 rows(DEAD, 1084)                                # Rubber Producing Facilities Disposal Commission: not printed
@@ -61,6 +73,7 @@ rows(DEAD, 1084)                                # Rubber Producing Facilities Di
 NEW = [
     ('National Security Agency', NME),                                                 # p. 137
     ('Federal Flood Indemnity Administration', HHFA),                                  # p. 417
+    ('Office of the United States Commissioner General, Brussels Exhibition', ST),     # p. 93
 ]
 
 shutil.copy(SRC, DST)

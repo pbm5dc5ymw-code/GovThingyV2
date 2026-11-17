@@ -103,3 +103,10 @@ a row unprinted. Navy bureaus are margin side-headings that the heading inventor
 ## 1958 (2026-11-17)
 The 1958-59 scan has a constant offset (+11) through the Guide. A new agency can appear only in the Guide in its
 first year (Commission on Civil Rights, 1958): under the Guide rule it is not added; flag it to the user.
+
+## Verification of 1957-1958 (2026-11-17)
+Name-matching against the text is not verification: in 1957-58 it "matched" rows to officials lists, address tables,
+unit lists and members lists. What worked: group every live row by its candidate evidence page, render 8 pages per
+image at 50 dpi (bold headings and run-ins are readable at that size), check each row on its page, then search and
+render the specific pages for rows whose candidate page was only a list. OCR often cuts bold headings short ("Bureau
+of R", "Civil Aeronautic"), so a missing text match is not proof a heading is missing either.

@@ -22,6 +22,11 @@ was matched to its 1958 heading; changed units were read on the page images.
   - Independent agencies: new Airways Modernization Board (Act of August 14, 1957, p. 352). The Federal Flood
     Indemnity Administration is not printed. The Commission on Civil Rights (1957) appears only in the Guide (p. 533),
     so it is not added under the Guide rule. Justice's new Civil Rights Division is a litigating division (not added).
+  - Verification pass (user request, 2026-11-17): every live row was checked on the page image, with the printed
+    page recorded in data/Evidence 1957-1958.xlsx. The Bureau of Economic Affairs has its own bold heading again
+    (p. 88) and comes back on its row; the Veterans' Education Appeals Board and the Advisory Committee on Weather
+    Control are no longer printed. The Brussels Commissioner General's office (added in 1957) is still a bold
+    heading with a description (p. 94).
 Renames keep the same row: Office of Production and Defense Lending -> Office of Defense Lending (1091); Bureau of
 Post Office Operations -> Bureau of Operations (941).
 """
@@ -58,8 +63,12 @@ def rows(code, *row_numbers):
 # Treasury
 rows(DEAD, 432, 1092)                           # Reconstruction Finance Corporation, Federal Facilities Corporation:
                                                 # not printed; RFC Liquidation Fund under Defense Lending (p. 103)
+# State
+rows(ST, 1114)                                  # Bureau of Economic Affairs: bold heading again (p. 88)
 # Independent agencies
 rows(DEAD, 1121)                                # Federal Flood Indemnity Administration: not printed
+rows(DEAD, 1042, 1078)                          # Veterans' Education Appeals Board, Advisory Committee on Weather
+                                                # Control: no longer in the Guide or elsewhere
 
 NEW = [
     ('Bureau of Public Affairs (State)', ST),                                          # p. 84

@@ -177,3 +177,11 @@ Services (1947 umbrella over FDA and other agencies). 1935-1943 untouched.
 From the 1957-58 edition the Manual moves many boards and committees into an end-of-book Guide (capitals run-ins
 with descriptions). Rows already in the sheet that appear there stay live with their coding; Guide entries that are
 not already rows are not added (presidential advisory committees, memorial and centennial commissions, etc.).
+
+## Every row, every year, on the page image (user requirement, 2026-11-17)
+"Every entry must follow the rules." Before a year is committed, every live row — carried rows included — needs a
+recorded printed page and evidence type (bold/centered heading + description, set-off run-in + description, or
+Guide entry), confirmed on the page image, not by text matching alone. Name matches in officials lists, unit lists,
+members lists, address tables and sentences do not count. Keep the record in data/Evidence <years>.xlsx. Rows with
+no qualifying evidence go Dead that year (and can come back on the same row when the heading returns, e.g. the
+State Bureau of Economic Affairs: Dead 1957, live 1958).
