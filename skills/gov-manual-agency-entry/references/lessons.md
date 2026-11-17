@@ -99,3 +99,7 @@ ends the row under the agency-not-position rule.
 The 1957-58 scan skips printed pp. 109-110 and repeats pp. 512-513: offset +10 through p. 108, +8 for pp. 111-513,
 +10 from p. 514. Rows that leave the agency chapters may be in the new Guide (pp. 521-529); search it before calling
 a row unprinted. Navy bureaus are margin side-headings that the heading inventory misses; confirm in the text.
+
+## 1958 (2026-11-17)
+The 1958-59 scan has a constant offset (+11) through the Guide. A new agency can appear only in the Guide in its
+first year (Commission on Civil Rights, 1958): under the Guide rule it is not added; flag it to the user.
